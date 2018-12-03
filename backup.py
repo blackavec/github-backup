@@ -18,7 +18,7 @@ def progress(*args):
  print(args, flush=True)
 
 def clone(repo):
-  path = 'git clone %s' % (repo.ssh_url) 
+  path = './projects/%s/%s' % (org, repo.name) 
   print(path)
   Repo.clone_from(repo.ssh_url, path, progress)
 
